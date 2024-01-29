@@ -1,0 +1,568 @@
+                                                                  <!--Task-01 Responsive Landing Page --> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-cTzXhNv1l3LGibH6LL2QfR7uPxIuu1kZ7DT3WB6WQr3QgOqPmF/5BiWxqZy5lENl" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha384-L7kE16v1LNYVzRcxM2rO5d5FqU8C5Szz2dYFoAcaz+qH6qvhUp1RWu26BfMlGJ8" crossorigin="anonymous"></script>
+
+
+    <style>
+      .fixed-top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #3498db; /* Initial color */
+        z-index: 1000;
+        transition: background-color 0.3s; /* Smooth color transition */
+      }
+
+      .scrolled {
+        background-color: #2c3e50 !important; /* Color on scroll */
+      }
+
+      .fixed-top-nav a {
+        color: #fff !important; /* Change to your desired text color */
+      }
+
+      .fixed-top-nav a:hover {
+        color: #ecf0f1 !important; /* Change to your desired text color on hover */
+      }
+
+      .fixed-top-nav:hover {
+        background-color: #2980b9 !important; /* Change to your desired background color on hover */
+      }
+
+      /* Add a class to style the navigation bar on scroll */
+      .scrolled {
+        background-color: #2c3e50 !important; /* Change to your desired color on scroll */
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+      }
+
+      nav {
+          background-color: #3498db; /* Change to your brand color */
+      }
+
+      .navbar-brand, .nav-link {
+          color: #fff; /* Navbar text color */
+      }
+
+      .navbar-brand:hover, .nav-link:hover {
+          color: #ecf0f1; /* Navbar text color on hover */
+      }
+
+      .jumbotron {
+          background-color: #3498db; /* Jumbotron background color */
+          color: #fff; /* Jumbotron text color */
+          padding: 60px 0;
+          text-align: center;
+      }
+
+      .card {
+          height: 100%;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s;
+      }
+
+      .card:hover {
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-outline-success {
+          color: #fff;
+          background-color: #28a745; /* Change to your desired background color */
+          border-color: #28a745;
+      }
+
+      .btn-outline-success:hover {
+          background-color: #218838; /* Change to a darker shade for hover effect */
+           color: #fff;
+      } 
+
+      .footer {
+          background-color: #f8f9fa; /* Footer background color */
+          color: #343a40; /* Footer text color */
+          padding: 20px 0;
+      }
+
+      .input-group input {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+      }
+  </style>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top-nav" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">MY_WEB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="Web_dev/index.html">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                  </a>                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+      </div>
+    </nav>
+
+
+    <!-- Jumbotron Section -->
+    <div class="jumbotron">
+      <h1 class="display-4">Discover Quality Products</h1>
+      <p class="lead">Explore our curated collection of premium products for a better experience.</p>
+    </div>
+  
+
+    <!-- Featured Products Section -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Featured Products</h2>
+    <div class="row">
+
+        <!-- Product 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="product1.jpg"
+                class="card-img-top"
+                alt="Product 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">EvoFox Fireblade Wired TKL Gaming Keyboard</h5>
+                <p class="card-text">Backlit Keyboard Membrane | Mixed Color Lighting | Floating Keycaps |19 Anti-Ghosting Keys | Windows Lock Key | Braided cable |(Black)</p>
+                <p class="card-text">Price: $19.99</p>
+                <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+              </div>
+            </div>
+          </div>
+
+<!-- Product 2 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product2.jpg"
+        class="card-img-top"
+        alt="Product 2"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Ant Esports GM320 RGB Optical Wired Gaming Mouse</h5>
+        <p class="card-text">8 Programmable Buttons | 12800 DPI I Ergonomic Design with Braided Cable - Black</p>
+        <p class="card-text">Price: $22.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Product 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product3.jpg"
+        class="card-img-top"
+        alt="Product 3"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Philips 276B1/94 (27") Monitor</h5>
+        <p class="card-text">QHD Monitor, USB Type C Monitor, Light Sensor, Power Sensor, USB Hub, RJ 45, Built in Speaker, Height Adjustable</p>
+        <p class="card-text">Price: $24.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product4.jpg"
+        class="card-img-top"
+        alt="Product 4"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Leader Scout MTB 26T Mountain Bicycle/Bike</h5>
+        <p class="card-text">Without Gear Single Speed for Men - Sea Green, Ideal for 10 + Years, Frame Size: 18 Inches</p>
+        <p class="card-text">Price: $29.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 5 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product5.jpg"
+        class="card-img-top"
+        alt="Product 5"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Storio Cars 1:32 Diecast Metal Pullback Toy car</h5>
+        <p class="card-text">Storio Cars 1:32 Diecast Metal Pullback Toy car for Kids Best Gifts Toys for Kids Boys - Black</p>
+        <p class="card-text">Price: $34.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 6 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product6.jpg"
+        class="card-img-top"
+        alt="Product 6"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Canon PIXMA MG2577s</h5>
+        <p class="card-text">All in One (Print, Scan, Copy) Inkjet Colour Printer for Home</p>
+        <p class="card-text">Price: $39.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 7 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product7.jpg"
+        class="card-img-top"
+        alt="Product 7"
+      />
+      <div class="card-body">
+        <h5 class="card-title">PTron Bassbuds Wave ENC Bluetooth 5.3 Wireless Headphones</h5>
+        <p class="card-text">40Hrs Total Playtime, Movie Mode & Deep Bass, Low Latency in-Ear TWS Earbuds, Stereo Calls, Smooth Touch Control & Type-C Charging (Blue)</p>
+        <p class="card-text">Price: $44.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 8 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product8.webp"
+        class="card-img-top"
+        alt="Product 8"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Nike Mens</h5>
+        <p class="card-text">Nike Mens Air Max Impact 4 Running Shoe</p>
+        <p class="card-text">Price: $49.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 9 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product9.jpg"
+        class="card-img-top"
+        alt="Product 9"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Men's Shirt</h5>
+        <p class="card-text">Lacoste Men's Slim Fit Polo Shirt</p>
+        <p class="card-text">Price: $54.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 10 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product10.webp"
+        class="card-img-top"
+        alt="Product 10"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Milton Helix 1000 Pet Water Bottle</h5>
+        <p class="card-text"> Set of 4, 1 Litre Each, Assorted | BPA Free | 100% Leak Proof | Office Bottle | Gym Bottle | Home | Kitchen | Travel Bottle | Hiking | Treking Bottle</p>
+        <p class="card-text">Price: $59.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 11 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product11.webp"
+        class="card-img-top"
+        alt="Product 11"
+      />
+      <div class="card-body">
+        <h5 class="card-title">crylic Transparent Spice Jar Box Case Set Storage Container</h5>
+        <p class="card-text">Kazenzo Crystal Seasoning Box Kitchen Acrylic Transparent Spice Jar Box Case Set Storage Container Condiment Jars Dispenser for Salt Sugar Cruet with Cover and with Serving Spoons Set of 4</p>
+        <p class="card-text">Price: $64.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 12 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product12.jpg"
+        class="card-img-top"
+        alt="Product 12"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Gas Lighter</h5>
+        <p class="card-text">INUS Easy Grip Metal Regular Gas Lighters for Gas Stoves, Restaurants & Kitchen Use (Color - Black) Pack of 1</p>
+        <p class="card-text">Price: $69.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 13 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product13.jpg"
+        class="card-img-top"
+        alt="Product 13"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Hex Dumbbells</h5>
+        <p class="card-text">Lifelong PVC Hex Dumbbells Pack of 2 for Home Gym Equipment Fitness Barbell|Gym Exercise|Home Workout, Gym Dumbbells|Dumbbells Weights for Men & Women (6 Months Warranty)</p>
+        <p class="card-text">Price: $74.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 14 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product14.jpg"
+        class="card-img-top"
+        alt="Product 14"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Gear Helicopter</h5>
+        <p class="card-text">Zest 4 Toyz Musical Toy Transparent Gear Helicopter for Kids Concept Electric Toys with Bump & Go Action for Kids Light & Sound Toy (Pack of 1) Battery Included</p>
+        <p class="card-text">Price: $79.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 15 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product15.jpg"
+        class="card-img-top"
+        alt="Product 15"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Kadence Wanderer Mahogany wood Ukulele soprano 21"</h5>
+        <p class="card-text">Super Combo, Bag with Tuner, Strap, Fluorocarbon String Set, Capo and Learning Course</p>
+        <p class="card-text">Price: $84.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 16 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product16.jpg"
+        class="card-img-top"
+        alt="Product 16"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Fitkit FT100 Series (3.25HP Peak) DC-Motorized Treadmill</h5>
+        <p class="card-text">(Inclination: Manual, Max Weight: 110 Kg) with Free At Home Installation and Connected Live Interactive Sessions by Onefitplus</p>
+        <p class="card-text">Price: $89.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 17 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product17.jpg"
+        class="card-img-top"
+        alt="Product 17"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Casio G-Shock Digital</h5>
+        <p class="card-text">Casio G-Shock Digital Gray Dial Men GBX-100TT-8DR (G1391)</p>
+        <p class="card-text">Price: $94.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Product 18 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+      <img
+        src="product18.jpg"
+        class="card-img-top"
+        alt="Product 18"
+      />
+      <div class="card-body">
+        <h5 class="card-title">JUAREZ Octavé JRK661 61-Key Electronic Keyboard Piano with LED Display</h5>
+        <p class="card-text">Adapter | Key Note Stickers | Mic |Music Sheet Stand | 255 Rhythms | 255 Timbres | 24 Demos | 8 Percussions</p>
+        <p class="card-text">Price: $99.99</p>
+        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+
+      </div>
+    </div>
+</div>
+
+<!-- Shopping Cart Section -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Shopping Cart</h2>
+  <div id="shopping-cart" class="row"></div>
+
+<!-- Footer Section -->
+<footer class="footer mt-5 bg-light text-dark">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4">
+                <h4>Contact Us</h4>
+                <p>123 Street, Cityville, Country</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="col-md-4">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-light" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="col-md-4">
+                <h4>About Us</h4>
+                <p>We are a leading provider of high-quality products. Our commitment to excellence has earned us several awards and certificates.</p>
+                <div class="mt-3">
+                    <p><strong>Awards:</strong> Best Product 2023, Top Seller 2024</p>
+                    <p><strong>Certificates:</strong> ISO 9001:2015, Quality Assurance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Email Address -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p>&copy; 2024 Your Brand. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <p>Email: info@yourbrand.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    
+
+    // Get the navigation bar element
+    var navbar = document.querySelector('.navbar');
+
+    // Get all the navigation links
+    var navLinks = document.querySelectorAll('.navbar-nav a');
+
+    // Add scroll event listener to change the navigation bar color on scroll
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Add hover event listeners to change the navigation item color on hover
+    navLinks.forEach(function (link) {
+      link.addEventListener('mouseenter', function () {
+        this.classList.add('text-light'); // Change to your desired text color on hover
+      });
+
+      link.addEventListener('mouseleave', function () {
+        this.classList.remove('text-light'); // Reset text color on mouse leave
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
